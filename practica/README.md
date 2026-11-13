@@ -1,9 +1,8 @@
 # Programación Web · Semana 06 · Carrito y laboratorio HTTP
 
 **Estudiante:** Andy Ortega  
-**Compañero/a:** Andy Ortega
 
-Abre esta carpeta en VS Code y ejecuta `index.html` con **Open with Live Server**. En Chrome, abre DevTools con ⌥⌘I en Mac o F12 en Windows. Usa **Network** para inspeccionar las peticiones y **Console** para ver errores.
+Abrir esta carpeta en VS Code y ejecutar `index.html` con **Open with Live Server**. En Chrome, abre DevTools con ⌥⌘I en Mac o F12 en Windows. Usa **Network** para inspeccionar las peticiones y **Console** para ver errores.
 
 ## Ficha de los seis casos
 
@@ -38,7 +37,7 @@ Abre esta carpeta en VS Code y ejecuta `index.html` con **Open with Live Server*
 
 ## Capturas para la entrega
 
-Las tres capturas reales están guardadas en `capturas/`.
+Las tres capturas están guardadas en `capturas/`.
 
 1. `01-network-carrito.png`: pestaña Network con la carga normal y los estados visibles.
 2. `02-modulo-404.png`: petición a `js/calculo.js` con el estado 404 visible.
@@ -50,4 +49,4 @@ Las tres capturas reales están guardadas en `capturas/`.
 
 ## Declaración de uso de IA
 
-Usé ChatGPT/Codex para integrar el laboratorio con los módulos de la semana 5, preparar el registro y sus filtros, verificar el cálculo del carrito, ejecutar las pruebas en el navegador y redactar la ficha. Los valores de esta ficha corresponden a la ejecución realizada con un servidor HTTP local.
+Usé ChatGPT/Codex para integrar el laboratorio con los módulos de la semana 5, preparar el registro y sus filtros, verificar el cálculo del carrito, ejecutar las pruebas en el navegador y redactar la ficha correctamente, ademas de revisar las faltas ortograficas.
