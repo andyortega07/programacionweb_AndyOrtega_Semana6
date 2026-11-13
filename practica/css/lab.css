@@ -1,0 +1,42 @@
+.barra a { color: inherit; }
+.lab {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+.lab .ancho { grid-column: 1 / -1; }
+.rapidos, .controles, #formPeticion { display: flex; flex-wrap: wrap; gap: 8px; }
+.rapidos, .controles { margin-bottom: 14px; }
+.lab button {
+  padding: 8px 12px;
+  border: 1px solid #232838;
+  border-radius: 8px;
+  background: white;
+  color: #232838;
+  cursor: pointer;
+}
+.lab button:hover, .lab button[aria-pressed="true"], #formPeticion button {
+  background: #232838;
+  color: white;
+}
+#formPeticion select { width: auto; }
+#formPeticion input { flex: 1 1 130px; min-width: 0; }
+#lineaEstado, #cabeceras, #cuerpo, .tabla-scroll td { font-family: monospace; }
+#lineaEstado { font-size: 1.3rem; font-weight: bold; }
+#significado, .estado { padding: 4px 8px; border-radius: 8px; }
+.exito { background: #dcfce7; color: #166534; }
+.redireccion { background: #e0f2fe; color: #075985; }
+.error-cliente { background: #ffedd5; color: #9a3412; }
+.error-servidor { background: #fee2e2; color: #991b1b; }
+.sin-respuesta { background: #f3f4f6; color: #374151; }
+#cabeceras { list-style: none; padding: 0; overflow-wrap: anywhere; }
+#cuerpo { background: #232838; color: #fff; padding: 12px; border-radius: 8px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.tabla-scroll { overflow-x: auto; }
+.tabla-scroll table { width: 100%; border-collapse: collapse; }
+.tabla-scroll th, .tabla-scroll td { padding: 8px; text-align: left; }
+.tabla-scroll th { background: #232838; color: #fff; }
+.tabla-scroll td { border-bottom: 1px solid #e5e7eb; overflow-wrap: anywhere; }
+@media (max-width: 800px) { .lab { grid-template-columns: minmax(0, 1fr); } }

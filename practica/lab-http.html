@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio HTTP · Tienda Tech</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/lab.css">
+  <script type="module" src="js/lab.js"></script>
+</head>
+<body>
+  <header class="barra">
+    <h1>🔬 Laboratorio HTTP</h1>
+    <a href="index.html">← Volver al carrito</a>
+  </header>
+  <main class="lab">
+    <section class="panel">
+      <h2>1. El cliente hace una petición</h2>
+      <p>Abre <strong>DevTools → Network</strong> antes de pulsar un botón.</p>
+      <div class="rapidos">
+        <button type="button" data-metodo="GET" data-url="data/productos.json">GET productos.json</button>
+        <button type="button" data-metodo="GET" data-url="data/ofertas.json">GET ofertas.json</button>
+        <button type="button" data-metodo="HEAD" data-url="data/productos.json">HEAD productos.json</button>
+        <button type="button" data-metodo="GET" data-url="index.html">GET index.html</button>
+        <button type="button" data-metodo="GET" data-url="css/styles.css">GET styles.css</button>
+      </div>
+      <form id="formPeticion">
+        <select id="metodo" aria-label="Método">
+          <option>GET</option><option>HEAD</option><option>POST</option>
+        </select>
+        <input id="url" value="js/calculos.js" aria-label="Ruta o URL" required>
+        <button type="submit">Enviar petición</button>
+      </form>
+    </section>
+    <section class="panel" aria-live="polite">
+      <h2>2. El servidor responde</h2>
+      <p id="sinRespuesta">Todavía no hay respuestas. Pulsa un botón.</p>
+      <div id="detalle" hidden>
+        <p id="lineaEstado"></p>
+        <p id="significado"></p>
+        <h3>Cabeceras de la respuesta</h3>
+        <ul id="cabeceras"></ul>
+        <h3>Cuerpo (primeros 300 caracteres)</h3>
+        <pre id="cuerpo"></pre>
+      </div>
+    </section>
+    <section class="panel ancho">
+      <h2>3. Registro de peticiones</h2>
+      <div class="controles">
+        <button type="button" data-filtro="0" aria-pressed="true">Todas</button>
+        <button type="button" data-filtro="2" aria-pressed="false">Solo 2xx</button>
+        <button type="button" data-filtro="4" aria-pressed="false">Solo 4xx</button>
+        <button type="button" id="btnLimpiar">Limpiar registro</button>
+      </div>
+      <div class="tabla-scroll">
+        <table>
+          <thead><tr><th>#</th><th>Método</th><th>URL</th><th>Estado</th><th>Tipo (Content-Type)</th><th>Tamaño</th><th>Tiempo</th></tr></thead>
+          <tbody id="registro"></tbody>
+        </table>
+      </div>
+      <p id="resumenRegistro" aria-live="polite"></p>
+    </section>
+  </main>
+</body>
+</html>
